@@ -21,6 +21,7 @@ spec:
                   echo "login=${LOGIN}" >> ${DDCONFPATH}
                   echo "password=${PASSWORD}" >> ${DDCONFPATH}
                   echo "${DOMAIN}" >> ${DDCONFPATH}
+                  ddclient -daemon=0 -debug -verbose -noquiet
               env:
                 - name: DDCONFPATH
                   value: /etc/ddclient/ddclient.conf
